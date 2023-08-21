@@ -2,10 +2,10 @@
 import { Box, Button, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { themeColors } from "../page";
 import bg from "../../public/images/inner5_back.png"
 import { FileType } from "../Hooks/FileProvider";
 import { statusType } from "../Hooks/StatusProvider";
+import { themeColors } from "../theme/theme";
 const UploadFiles = ({
   setData,
   setStatuses

@@ -20,10 +20,7 @@ type contextType={
     setStatuses: React.Dispatch<React.SetStateAction<statusType>>;
 }
 
-const statusContext=()=>{
-    const [status,setStatuses]=useState(initStatuses)
-    return {status,setStatuses}
-}
+
 
 
 export const StatusContext=createContext<contextType>({} as contextType)
@@ -34,11 +31,14 @@ const StatusProvider = ({
     children,
   }: {
     children: React.ReactNode;
-  }) => (
+  }) => {
+    const statusContext=()=>{
+        const [status,setStatuses]=useState(initStatuses)
+        return {status,setStatuses}
+    }
+    return (
     <StatusContext.Provider value={statusContext()}>
         {children}
-    </StatusContext.Provider>
-
-)
+    </StatusContext.Provider>)}
 
 export default StatusProvider

@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 import React from "react";
-import { themeColors } from "../page";
+import { themeColors } from "../theme/theme";
 
 const DataTable = ({ data }: { data: Array<any> }) => {
   const [page, setPage] = React.useState(0);
