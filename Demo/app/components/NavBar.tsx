@@ -64,7 +64,7 @@ const NavBar = () => {
           isValidated: false,
         });
       } else {
-        push("home/error");
+        push("demo/error");
       }
     };
     const continueDownload = async () => {
