@@ -10,8 +10,8 @@ import {
   TableRow,
 } from "@mui/material";
 import React, { ChangeEvent, useContext, useEffect, useState } from "react";
-import { themeColors } from "../page";
 import { FileContext } from "../Hooks/FileProvider";
+import { themeColors } from "../theme/theme";
 
 const DataValidationTable = ({ data }: { data: Array<any> }) => {
   const [page, setPage] = React.useState(0);

@@ -9,8 +9,8 @@ import {
   TableRow,
 } from "@mui/material";
 import React from "react";
-import { themeColors } from "../page";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { themeColors } from "../theme/theme";
 
 const DataGridTable = ({ data }: { data: Array<any> }) => {
   // const columns: GridColDef[] = [

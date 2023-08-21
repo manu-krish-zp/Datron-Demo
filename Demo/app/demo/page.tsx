@@ -3,14 +3,14 @@ import FileDetails from "@/app/components/InputFileDetails";
 import UploadFiles from "@/app/components/UploadFiles";
 import { Box } from "@mui/material";
 import React, { useContext, useState } from "react";
-import OutPutFileDetails from "../../components/OutPutFileDetails";
+import OutPutFileDetails from "../components/OutPutFileDetails";
 import InputFileDetails from "@/app/components/InputFileDetails";
-import LoadingComponent from "../../components/Loading";
+import LoadingComponent from "../components/Loading";
 import { StatusContext } from "@/app/Hooks/StatusProvider";
 import { FileContext, FileType } from "@/app/Hooks/FileProvider";
-import bg from "../../../public/images/inner5_back.png"
 
-const page = () => {
+
+const Page = () => {
   const { status, setStatuses } = useContext(StatusContext);
   const { data, setData } = useContext(FileContext);
 
@@ -43,4 +43,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

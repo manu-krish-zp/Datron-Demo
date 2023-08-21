@@ -7,14 +7,6 @@ export type FileType = {
     size: number;
   };
 
-const getContext=()=>{
-  
-    const [data, setData] = useState<FileType | null>(null);
-    const [selectedRows, setSelectedRows] = useState<boolean[]>(
-     []
-    );
-    return {data,setData,selectedRows,setSelectedRows}
-}
 
 type contextType={
     data: FileType | null,
@@ -32,6 +24,14 @@ const FileProvider =({
   }: {
     children: React.ReactNode;
   }) => {
+    const getContext=()=>{
+  
+      const [data, setData] = useState<FileType | null>(null);
+      const [selectedRows, setSelectedRows] = useState<boolean[]>(
+       []
+      );
+      return {data,setData,selectedRows,setSelectedRows}
+  }
   return (
    <FileContext.Provider value={getContext()}>{children}</FileContext.Provider>
   )

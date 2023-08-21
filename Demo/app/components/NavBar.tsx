@@ -19,12 +19,12 @@ import {
   import "../globals.css";
   import { redirect, useRouter } from "next/navigation";
   import bg from "../../public/images/header_pattern.svg";
-  import { themeColors } from "../page";
   import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
   import { useContext } from "react";
   import { StatusContext } from "@/app/Hooks/StatusProvider";
   import { FileContext } from "@/app/Hooks/FileProvider";
   import SplitButton from "@/app/components/SplitButton";
+import { themeColors } from '../theme/theme';
   
   
   const steps = ["Upload", "Generate", "Approve", "Download"];
@@ -36,7 +36,7 @@ const NavBar = () => {
     const { status, setStatuses } = useContext(StatusContext);
     const { data, setData, selectedRows, setSelectedRows } =
       useContext(FileContext);
-    const { push } = useRouter();
+    const { push,replace } = useRouter();
     const theme: Theme = useTheme();
   
     const smUP: boolean = useMediaQuery(() => theme.breakpoints.up("md"));
@@ -143,7 +143,7 @@ const NavBar = () => {
                 step: 0,
               });
               setData(null);
-              redirect("/home/demo");
+              replace("/demo");
             }}
           />
         </Hidden>
@@ -161,7 +161,7 @@ const NavBar = () => {
                 step: 0,
               });
               setData(null);
-              redirect("/home/demo");
+              replace('/demo');
             }}
           />
         </Hidden>
