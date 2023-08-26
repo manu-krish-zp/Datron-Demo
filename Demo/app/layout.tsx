@@ -7,10 +7,6 @@ import { createTheme } from "@mui/material/styles";
 import StatusProvider from "./Hooks/StatusProvider";
 import FileProvider from "./Hooks/FileProvider";
 
-export const metadata: Metadata = {
-  title: "Datron",
-  description: "Datron Data",
-};
 const theme = createTheme({
   typography: {
     fontFamily: [
